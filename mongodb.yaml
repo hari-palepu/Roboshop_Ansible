@@ -1,3 +1,4 @@
+---
 - name: MongoDB Palybook
   hosts: MongoDB
   become: yes
