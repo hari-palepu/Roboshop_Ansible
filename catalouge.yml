@@ -17,8 +17,15 @@
       name: roboshop
 
   - name: Creat app directory
-    ansible.builtin.file:
+    ansible.builtin.file: #Ansible file module
       path: /app
       state: directory
+
+  - name: Download the application code to created app directory.
+    ansible.builtin.uri:
+      url: curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip
+
+
+
 
 
