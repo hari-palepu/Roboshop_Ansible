@@ -4,7 +4,7 @@
   tasks:
   - name: Install Nginx
     ansible.builtin.dnf:
-      name: Nginx
+      name: nginx
       state: present
 
   - name: Remove the default html diectory
