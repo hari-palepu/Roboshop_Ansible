@@ -71,9 +71,13 @@
     ansible.builtin.debug: #To print the content
       msg: "product_count: {{product_count}}"
 
-  - name: Load catalogue data 
-    ansible.builtin.command: mongo --host mongodb.haripalepu.cloud </app/schema/catalogue.js
-    when: product_count.stdout == "0"  #When is a condition in ansible like if & else in linux
+  # - name: Load catalogue data 
+  #   ansible.builtin.command: mongo --host mongodb.haripalepu.cloud </app/schema/catalogue.js
+  #   when: product_count.stdout == 0 #When is a condition in ansible like if & else in linux
+
+  - name: load catalogue data
+    ansible.builtin.command: mongo --host mongodb.daws76s.online < /app/schema/catalogue.js
+    when: product_count.stdout == "0"
 
   - name: Start & Enable Catalogue Service
     ansible.builtin.service: 
