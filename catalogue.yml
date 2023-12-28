@@ -62,9 +62,9 @@
     ansible.builtin.command: mongo --host mongodb.haripalepu.cloud --quiet --eval 'db = db.getSiblingDB("catalogue"); db.products.count()'
     register: products_count
 
-  - name: print the count
-    ansible.builtin.debug: #To print the content
-      msg: "products_count: {{products_count}}"
+  # - name: print the count
+  #   ansible.builtin.debug: #To print the content
+  #     msg: "products_count: {{products_count}}"
 
   - name: Load catalogue data 
     ansible.builtin.command: mongo --host mongodb.haripalepu.cloud </app/schema/catalogue.js
