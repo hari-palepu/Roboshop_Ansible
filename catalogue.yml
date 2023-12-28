@@ -57,3 +57,11 @@
     ansible.builtin.package: #Ansible package module
       name: mongodb-org-shell 
       state: present
+
+  - name: Get the catagories count #if the count is 0 i.e, no data in catalogue server
+    ansible.buildin.command: mongo --host mongodb.haripalepu.cloud --quiet --eval 'db = db.getSiblingDB("catalogue"); db.products.count()'
+    register: products_count
+
+  - name: print the count
+    ansible.builtin.debug: #To print the content
+      message: "products_count: {{products_count}}"
