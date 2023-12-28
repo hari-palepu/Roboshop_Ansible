@@ -1,6 +1,6 @@
 ---
-- name: Catalouge palybook
-  hosts: Catalouge
+- name: Catalogue palybook
+  hosts: Catalogue
   become: yes
   tasks:
   - name: Disable old nodejs and enable nodejs:18
