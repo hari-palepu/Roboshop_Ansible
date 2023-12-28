@@ -64,4 +64,4 @@
 
   - name: print the count
     ansible.builtin.debug: #To print the content
-      message: "products_count: {{products_count}}"
+      msg: "products_count: {{products_count}}"
