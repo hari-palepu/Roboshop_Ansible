@@ -8,7 +8,7 @@
       state: present
 
   - name: Remove the default html diectory
-    ansible.builin.file:
+    ansible.builtin.file:
       name: /usr/share/nginx/html
       state: absent
 
