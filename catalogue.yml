@@ -16,6 +16,11 @@
     ansible.builtin.user: #Ansible user module
       name: roboshop
 
+  - name: Remove app directory
+    ansible.builtin.file: #Ansible file module
+      path: /app
+      state: absent
+
   - name: Creat app directory
     ansible.builtin.file: #Ansible file module
       path: /app
@@ -30,7 +35,7 @@
     ansible.builtin.unarchive: #Ansible unzip module
       src: /tmp/catalogue.zip
       dest: /app
-      remote_src: yes
+      remote_src: yes #Because the file is already available in remote server 
 
   - name: Install dependencies
     ansible.builtin.command: npm install
