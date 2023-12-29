@@ -1,7 +1,7 @@
 - name: MySql Playbook
   hosts: MySql
   become: yes
-  tastks:
+  tasks:
   - name: Disable current versio of mysql
     ansible.builtin.command: dnf module disable mysql -y
 
