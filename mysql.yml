@@ -18,7 +18,7 @@
   - name: Start & Enable MySql
     ansible.builtin.service:
       name: mysqld
-      state: strated
+      state: started
       enabled: yes
 
   - name: setup room password
