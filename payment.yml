@@ -5,7 +5,7 @@
   tasks:
   - name: Install Python packages
     ansible.builtin.dnf: 
-      name: {{item}}
+      name: "{{item}}"
       state: present
     loop:
     - python36
