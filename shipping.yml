@@ -9,7 +9,7 @@
       name: maven
       state: present
 
-   - name: Creat roboshop user
+  - name: Creat roboshop user
     ansible.builtin.user: #Ansible user module
       name: roboshop
 
