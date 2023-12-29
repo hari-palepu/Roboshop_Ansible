@@ -1,6 +1,6 @@
 ---
 - name: User palybook
-  hosts: user
+  hosts: User
   become: yes
   tasks:
   - name: Disable old nodejs and enable nodejs:18
