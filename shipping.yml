@@ -44,7 +44,7 @@
     args:
       chdir: /app
 
-  - name: Copy the shhiping.service 
+  - name: Copy the shiping.service 
     ansible.builtin.copy: 
       src: shipping.service
       dest: /etc/systemd/system/shipping.service
